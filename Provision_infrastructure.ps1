@@ -95,8 +95,8 @@ $NewCredObj = New-Object -TypeName PSCredential -ArgumentList $username, $passwo
 $RegLoginServer = (Get-AzContainerRegistry -ResourceGroupName $ContainerInstanceRG).LoginServer
 
 # Before we use our modified image, we need to push it to ACR -> read instructions.md
-New-AzContainerGroup -ResourceGroupName $ContainerInstanceRG -Name $ProjectName-dnsmasq `
-    -Image $RegLoginServer/dnsmasq -DnsNameLabel 'solartstdns' -IpAddressType Public -Port @(53) -RegistryCredential $NewCredObj
+#New-AzContainerGroup -ResourceGroupName $ContainerInstanceRG -Name $ProjectName-dnsmasq `
+#    -Image $RegLoginServer/dnsmasq -DnsNameLabel 'solartstdns' -IpAddressType Public -Port @(53) -RegistryCredential $NewCredObj
 
 #endregion
 
