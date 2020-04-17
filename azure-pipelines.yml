@@ -19,3 +19,9 @@ steps:
     repository: $(imageName)
     command: build
     Dockerfile: docker/Dockerfile
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
