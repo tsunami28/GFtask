@@ -11,8 +11,8 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'dfe25cbf-3f6a-433a-9e88-df5946fbbacd'
-  imageRepository: 'tsunamigftask'
-  containerRegistry: 'tsunamipoc.azurecr.io'
+  imageRepository: 'solardns'
+  containerRegistry: 'solaracr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/docker/Dockerfile'
   tag: '$(Build.BuildId)'
   
