@@ -21,6 +21,12 @@
     Requires   : Az PowerShell module
 #>
 
+$azureAplicationId ="c351cca0-3e23-44b1-a138-78e2f3ba6afc"
+$azureTenantId= "32cdbb16-2671-4bdd-aeb0-986d9190f566"
+$azurePassword = ConvertTo-SecureString "yJnga2MbLYU/ldcMPkP/.RxYkr-Jd642" -AsPlainText -Force
+$psCred = New-Object System.Management.Automation.PSCredential($azureAplicationId , $azurePassword)
+Connect-AzAccount -Credential $psCred -TenantId $azureTenantId  -ServicePrincipal 
+
 #region Define Parameters
 $Location = "West Europe"
 $ProjectName = "mkatinski"
