@@ -21,9 +21,9 @@
     Requires   : Az PowerShell module
 #>
 
-$azureAplicationId ="c351cca0-3e23-44b1-a138-78e2f3ba6afc"
+$azureAplicationId ="e5d31688-167d-479b-8f1e-d96e17476bc9"
 $azureTenantId= "32cdbb16-2671-4bdd-aeb0-986d9190f566"
-$azurePassword = ConvertTo-SecureString "yJnga2MbLYU/ldcMPkP/.RxYkr-Jd642" -AsPlainText -Force
+$azurePassword = ConvertTo-SecureString "Q.?89u/RSWqoXE/28@=Reuusz9@oIbBk" -AsPlainText -Force
 $psCred = New-Object System.Management.Automation.PSCredential($azureAplicationId , $azurePassword)
 Connect-AzAccount -Credential $psCred -TenantId $azureTenantId  -ServicePrincipal 
 
