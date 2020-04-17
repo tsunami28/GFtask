@@ -41,40 +41,40 @@ $NsgNameAcc = "$vNetNameAcc-nsg"
 
 #region RG creation
 # Create RG for virtual machines
-if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $VirtualMachinesRG }) {
-    Write-Host $VirtualMachinesRG already exist -ForegroundColor Cyan
-}
-else {    
-    Write-Host $VirtualMachinesRG creating ... Please wait -ForegroundColor Yellow
-    New-AzResourceGroup -Name $VirtualMachinesRG -Location $location  
-    if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $VirtualMachinesRG }) {
-        Write-Host Resource Group $VirtualMachinesRG successfully created. -ForegroundColor Green
-    }
-}
+#if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $VirtualMachinesRG }) {
+#    Write-Host $VirtualMachinesRG already exist -ForegroundColor Cyan
+#}
+#else {    
+#    Write-Host $VirtualMachinesRG creating ... Please wait -ForegroundColor Yellow
+#    New-AzResourceGroup -Name $VirtualMachinesRG -Location $location  
+#    if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $VirtualMachinesRG }) {
+#        Write-Host Resource Group $VirtualMachinesRG successfully created. -ForegroundColor Green
+#    }
+#}
 
 # Create RG for Container Instance
-if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $ContainerInstanceRG }) {
-    Write-Host $ContainerInstanceRG already exist -ForegroundColor Cyan
-}
-else {    
-    Write-Host $ContainerInstanceRG creating ... Please wait -ForegroundColor Yellow
-    New-AzResourceGroup -Name $ContainerInstanceRG -Location $location  
-    if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $ContainerInstanceRG }) {
-        Write-Host Resource Group $ContainerInstanceRG successfully created. -ForegroundColor Green
-    }
-}
+#if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $ContainerInstanceRG }) {
+#    Write-Host $ContainerInstanceRG already exist -ForegroundColor Cyan
+#}
+#else {    
+#    Write-Host $ContainerInstanceRG creating ... Please wait -ForegroundColor Yellow
+#    New-AzResourceGroup -Name $ContainerInstanceRG -Location $location  
+#    if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $ContainerInstanceRG }) {
+#        Write-Host Resource Group $ContainerInstanceRG successfully created. -ForegroundColor Green
+#    }
+#}
 
 # Create RG for networking
-if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $NetworkingRG }) {
-    Write-Host $NetworkingRG already exist -ForegroundColor Cyan
-}
-else {    
-    Write-Host $NetworkingRG creating ... Please wait -ForegroundColor Yellow
-    New-AzResourceGroup -Name $NetworkingRG -Location $location
-    if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $NetworkingRG }) {
-        Write-Host Resource Group $NetworkingRG successfully created. -ForegroundColor Green
-    }
-}
+#if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $NetworkingRG }) {
+#    Write-Host $NetworkingRG already exist -ForegroundColor Cyan
+#}
+#else {    
+#    Write-Host $NetworkingRG creating ... Please wait -ForegroundColor Yellow
+#    New-AzResourceGroup -Name $NetworkingRG -Location $location
+#    if (Get-AzResourceGroup | Where-Object { $_.ResourceGroupName -match $NetworkingRG }) {
+#        Write-Host Resource Group $NetworkingRG successfully created. -ForegroundColor Green
+#    }
+#}
 #endregion
 
 #region Test environment
