@@ -191,7 +191,7 @@ Import-Csv -Path $CSVFilePath | ForEach-Object {
     Set-AzVMOperatingSystem -VM $vmConfig -Windows -ComputerName $vmName -Credential $NewCredObj
 
     # Identify the diagnostics storage account
-    Set-AzVMBootDiagnostics -Enable -ResourceGroupName $VirtualMachinesRG -VM $vmConfig -StorageAccountName $StorageAccountName
+    #Set-AzVMBootDiagnostics -Enable -ResourceGroupName $VirtualMachinesRG -VM $vmConfig -StorageAccountName $StorageAccountName
 
     Set-AzVMSourceImage -VM $vmConfig -PublisherName $pubName -Offer $offerName -Skus $skuName -Version 'latest'
     Set-AzVMOSDisk -VM $vmConfig -Name $osDiskName -DiskSizeInGB $osDiskSize -StorageAccountType $osDiskType -CreateOption fromImage
