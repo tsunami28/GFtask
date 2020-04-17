@@ -1,0 +1,2 @@
+VmName,Publication,Offer,SKU,DiskSize,OS,VMSize,AVSet
+Solar-vm-01,MicrosoftWindowsServer,windowsserver,2016-Datacenter,128,Windows,Standard_B2ms,solar-avset
